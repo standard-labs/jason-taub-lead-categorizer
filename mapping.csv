@@ -18,13 +18,17 @@ URL,TYPE
 /i/coral-ridge,Neighborhood: Coral Ridge
 /i/downtown-fort-lauderdale,Neighborhood: Downtown Fort Lauderdale
 /i/fort-lauderdale-beach,Neighborhood: Fort Lauderdale Beach
+/i/lauderdale-beach,Neighborhood: Fort Lauderdale Beach
 /i/lake-ridge,Neighborhood: Lake Ridge
 /i/las-olas-isles,Neighborhood: Las Olas Isles
-/i/lauderdale-harbor,Neighborhood: Lauderdale Harbours
+/i/lauderdale-harbour,Neighborhood: Lauderdale Harbours
 /i/rio-vista,Neighborhood: Rio Vista
 /i/riverfront-high-rises,High Rise Riverfront Condos
 /i/tarpon-river,Neighborhood: Tarpon River
 /i/victoria-park,Neighborhood: Victoria Park
+/i/poinsettia-heights,Neighborhood: Poinsettia Heights
+/i/colee-hammock-beverly-heights,Neighborhood: Colee Beverly
+/i/sunrise-key,Neighborhood: Sunrise Key
 /i/new-construction,New Construction
 315-NE-3rd-Ave,Condo: Strada
 /i/strada,Condo: Strada
@@ -44,8 +48,12 @@ URL,TYPE
 /i/waverly-at-las-olas-condos,Condo: Waverly
 /i/waterfront,Waterfront Homes
 /i/waterfront-homes,Waterfront Homes
-/idx/details/listing,other
+/i/flagler-village-all,Neighborhood: Flagler Village
+533-NE-3rd-Ave,Condo: Sole at Fort Lauderdale
 /buy,BUY
 /sell,SELL
 /idx/search,GENERAL
+/idx/search/advanced,GENERAL
+/idx/map,GENERAL
 /idx/featured,GENERAL
+/idx/details/listing,other

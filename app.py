@@ -39,13 +39,14 @@ all_lead_categories_options = [
     "Condo: Strada",
     "Condo: Waverly",
     "Condo: NuRiver Landing",
+    "Condo: Sole at Fort Lauderdale",
     "New Construction",
     "Waterfront Homes",
     "High Rise Riverfront Condos",
-    "other",
     "BUY",
     "SELL",
-    "GENERAL"
+    "GENERAL",
+    "other"
 ]
 
 
