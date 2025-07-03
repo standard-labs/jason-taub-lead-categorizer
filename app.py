@@ -7,6 +7,7 @@ This Streamlit app categorizes leads based on their website activity journey.
 import streamlit as st
 import pandas as pd
 import re
+import ast
 from urllib.parse import urlparse
 
 all_lead_categories_options = [
@@ -48,6 +49,58 @@ all_lead_categories_options = [
     "GENERAL",
     "other"
 ]
+
+def parse_email_array(email_array_str):
+    """Parse the email array string to extract email addresses."""
+    if pd.isna(email_array_str) or email_array_str == '[]':
+        return []
+        
+    # Handle the format: "[email1@domain.com, email2@domain.com]"
+    try:
+        # Use ast.literal_eval for safer parsing of the string representation of a list
+        return ast.literal_eval(email_array_str)
+    except (ValueError, SyntaxError):
+        # Fallback to regex if ast.literal_eval fails
+        emails = re.findall(r'[\w\.-]+@[\w\.-]+', email_array_str)
+        return emails
+
+def process_csv(df):
+    """Process the CSV to split rows with multiple emails into separate rows."""
+    # Make a copy of the dataframe to avoid modifying the original
+    df_copy = df.copy()
+    
+    # Parse the email array column
+    df_copy['parsed_emails'] = df_copy['pii.Email_Array'].apply(parse_email_array)
+    
+    # Count emails before processing
+    total_emails_before = df_copy['parsed_emails'].apply(len).sum()
+    total_rows_before = len(df_copy)
+    
+    # Filter out rows with no emails
+    df_with_emails = df_copy[df_copy['parsed_emails'].apply(len) > 0].copy()
+    
+    # Explode the dataframe to have one row per email
+    df_exploded = df_with_emails.explode('parsed_emails')
+    
+    # Rename the column to 'email' for clarity
+    df_exploded = df_exploded.rename(columns={'parsed_emails': 'email'})
+    
+    # Count stats after processing
+    total_rows_after = len(df_exploded)
+    
+    return df_exploded
+
+def split_emails(df):
+    """Main function to split emails into unique rows"""
+        
+        # Check if the required column exists
+    if 'pii.Email_Array' not in df.columns:
+        st.error("The CSV file must contain a column named 'pii.Email_Array' with email addresses.")
+    else:
+        # Process the CSV
+        df_processed = process_csv(df)   
+
+    return df_processed
 
 
 def normalize_url(url):
@@ -195,6 +248,8 @@ def main():
         if is_new_file:
             # New file uploaded, process it
             leads_df = load_data(leads_file)
+            leads_df = split_emails(leads_df)
+
             st.session_state.file_hash = file_hash
 
             # Load mapping.csv from the current directory
