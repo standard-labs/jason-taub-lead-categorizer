@@ -21,9 +21,11 @@ URL,TYPE
 /i/lauderdale-beach,Neighborhood: Fort Lauderdale Beach
 /i/lake-ridge,Neighborhood: Lake Ridge
 /i/las-olas-isles,Neighborhood: Las Olas Isles
+/neighborhood-spotlight-las-olas-isles,Neighborhood: Las Olas Isles
 /i/lauderdale-harbour,Neighborhood: Lauderdale Harbours
 /i/rio-vista,Neighborhood: Rio Vista
 /i/riverfront-high-rises,High Rise Riverfront Condos
+/riverfront-high-rise-condos,High Rise Riverfront Condos
 /i/tarpon-river,Neighborhood: Tarpon River
 /i/victoria-park,Neighborhood: Victoria Park
 /i/poinsettia-heights,Neighborhood: Poinsettia Heights
@@ -50,6 +52,39 @@ URL,TYPE
 /i/waterfront-homes,Waterfront Homes
 /i/flagler-village-all,Neighborhood: Flagler Village
 533-NE-3rd-Ave,Condo: Sole at Fort Lauderdale
+/new-construction,New Construction
+/neighborhoods/bermuda-riviera,Neighborhood: Bermuda Riviera
+/neighborhoods/colee-hammock-beverly-heights,Neighborhood: Colee Beverly
+/neighborhoods/coral-ridge,Neighborhood: Coral Ridge
+/neighborhoods/downtown-fort-lauderdale,Neighborhood: Downtown Fort Lauderdale
+/neighborhoods/edgewood,Neighborhood: Edgewood
+/neighborhoods/flagler-village,Neighborhood: Flagler Village
+/neighborhoods/fort-lauderdale-beach,Neighborhood: Fort Lauderdale Beach
+/neighborhoods/harbor-beach,Neighborhood: Harbour Beach
+/neighborhoods/harbour-inlet-harbour-isles,Neighborhood: Inlet Isles
+/neighborhoods/lake-ridge,Neighborhood: Lake Ridge
+/neighborhoods/las-olas-isles,Neighborhood: Las Olas Isles
+/neighborhoods/lauderdale-beach,Neighborhood: Fort Lauderdale Beach
+/neighborhoods/lauderdale-harbours,Neighborhood: Lauderdale Harbours
+/neighborhoods/rio-vista,Neighborhood: Rio Vista
+/neighborhoods/riverfront-high-rise-condos,Neighborhood: River High Rises
+/neighborhoods/sunrise-key-sunrise-intracoastal,Neighborhood: Sunrise Key
+/neighborhoods/tarpon-river,Neighborhood: Tarpon River
+/neighborhoods/victoria-park,Neighborhood: Victoria Park
+/condos/100-las-olas,Condo: 100 Las Olas
+/condos/350-las-olas,Condo: Las Olas Grand
+/condos/las-olas-by-the-river,Condo: Las Olas By The River
+/condos/las-olas-grand,Condo: Las Olas Grand
+/condos/las-olas-river-house,Condo: Las Olas River House
+/condos/nuriver-landing,Condo: NuRiver Landing
+/condos/strada-315,Condo: Strada
+/condos/the-symphony,Condo: Symphony
+/condos/watergarden,Condo: Watergarden
+/condos/the-waverly-at-las-olas,Condo: Waverly
+/fort-lauderdale-waterfront-homes,Waterfront Homes
+/fort-lauderdale-neighborhood-map,GENERAL
+/fort-lauderdale-downtown-condo-map,GENERAL
+/broward-county-city-guide,GENERAL
 /buy,BUY
 /sell,SELL
 /idx/search,GENERAL

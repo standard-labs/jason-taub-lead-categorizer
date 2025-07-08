@@ -71,11 +71,7 @@ def process_csv(df):
     
     # Parse the email array column
     df_copy['parsed_emails'] = df_copy['pii.Email_Array'].apply(parse_email_array)
-    
-    # Count emails before processing
-    total_emails_before = df_copy['parsed_emails'].apply(len).sum()
-    total_rows_before = len(df_copy)
-    
+
     # Filter out rows with no emails
     df_with_emails = df_copy[df_copy['parsed_emails'].apply(len) > 0].copy()
     
@@ -84,10 +80,7 @@ def process_csv(df):
     
     # Rename the column to 'email' for clarity
     df_exploded = df_exploded.rename(columns={'parsed_emails': 'email'})
-    
-    # Count stats after processing
-    total_rows_after = len(df_exploded)
-    
+
     return df_exploded
 
 def split_emails(df):
