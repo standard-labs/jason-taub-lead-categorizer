@@ -89,6 +89,7 @@ def split_emails(df):
         # Check if the required column exists
     if 'pii.Email_Array' not in df.columns:
         st.error("The CSV file must contain a column named 'pii.Email_Array' with email addresses.")
+        return df
     else:
         # Process the CSV
         df_processed = process_csv(df)   
@@ -241,7 +242,8 @@ def main():
         if is_new_file:
             # New file uploaded, process it
             leads_df = load_data(leads_file)
-            leads_df = split_emails(leads_df)
+            if "email" not in leads_df.columns and "pii.Email_Array" in leads_df.columns:
+                leads_df = split_emails(leads_df)
 
             st.session_state.file_hash = file_hash
 
